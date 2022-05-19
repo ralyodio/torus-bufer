@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import path from 'path';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -38,6 +39,13 @@ const config = {
 							stream: true
 						})
 					]
+				}
+			},
+			resolve: {
+				alias: {
+					'@toruslabs/openlogin': path.resolve(
+						'./node_modules/@toruslabs/openlogin/dist/openlogin.umd.min.js'
+					)
 				}
 			}
 		}
