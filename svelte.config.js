@@ -43,9 +43,11 @@ const config = {
 			},
 			resolve: {
 				alias: {
+					/*
 					'@toruslabs/openlogin': path.resolve(
 						'./node_modules/@toruslabs/openlogin/dist/openlogin.umd.min.js'
 					)
+					*/
 				}
 			}
 		}
